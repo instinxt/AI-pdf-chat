@@ -1,0 +1,8 @@
+fastapi
+pydantic
+llama
+fitz
+SQLAlchemy
+sqlite3
+uuid
+datetime
