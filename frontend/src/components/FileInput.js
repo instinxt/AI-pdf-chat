@@ -17,9 +17,11 @@ function FileInput() {
 	}
 
 	const isValidFileType = (fileName) => {
-		const allowedExtensions = [".pdf", ".txt", ".docx"];
+		const allowedExtensions = [".pdf"];
 		const ext = fileName.substring(fileName.lastIndexOf("."));
-		return allowedExtensions.includes(ext.toLowerCase());
+		const isValidPdf = allowedExtensions.includes(ext.toLowerCase());
+		if (!isValidPdf) toast.error(`Invalid File: Only PDF allowed`);
+		return isValidPdf;
 	};
 
 	async function handleSubmit(event) {
